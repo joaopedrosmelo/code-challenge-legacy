@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Welcome to the Employer Portal</h1>
+
+<form method="post" action="/User/CheckUser">
+    <label for="username">Enter your username:</label>
+    <input type="text" id="username" name="username" required />
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewData["Message"] != null)
+{
+    <p style="color: green;">@ViewData["Message"]</p>
+}
+
+@if (ViewData["Error"] != null)
+{
+    <p style="color: red;">Error: @ViewData["Error"]</p>
+}
